@@ -15,4 +15,7 @@ I added a kill counter function that tracks the amount of mobs the player kills.
 labels to the GameOver canvas layer that displays the kill counter and survival timer along with the Game Over text. The timer and counter that display at the top left and right of the screen
 disappear when the Game Over screen appears to not be redundant.
 
-
+3rd Change:
+I fixed the camera position to the center of the screen by adding a Camera2D node and setting it's position to 960, 540. I added a function that allows the player to wrap around to the other side
+when they reach the border of the screen in any direction. This works by checking the coordinates of the players position and if it becomes less than 0 or greater than the screen size in either
+the x or y direction it sets the positional coordinate to either 0 or the max of the screen. I followed this YouTube tutorial to make this function: https://www.youtube.com/watch?v=acFfNAh0tRg
