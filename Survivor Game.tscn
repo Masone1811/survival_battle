@@ -25,18 +25,24 @@ outline_color = Color(1, 0.99215686, 1, 1)
 y_sort_enabled = true
 position = Vector2(38, 21)
 script = ExtResource("1_ony8i")
-metadata/_edit_vertical_guides_ = [-70.0]
-metadata/_edit_horizontal_guides_ = [58.0]
+metadata/_edit_vertical_guides_ = [960.0]
+metadata/_edit_horizontal_guides_ = [568.0, -200.0]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=576333443]
+offset = Vector2(960, 540)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1500965773]
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1514317463]
-offset_left = -10.0
-offset_top = -9.0
-offset_right = 1910.0
-offset_bottom = 1073.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1921.0
+offset_bottom = 1083.0
 metadata/_edit_use_anchors_ = true
+
+[node name="PineTree" parent="CanvasLayer/ColorRect" unique_id=1149868711 instance=ExtResource("2_ony8i")]
+position = Vector2(225, 444)
 
 [node name="Player" parent="." unique_id=814097230 instance=ExtResource("1_jkuhc")]
 position = Vector2(923, 556)
@@ -49,7 +55,7 @@ curve = SubResource("Curve2D_nyt22")
 unique_name_in_owner = true
 position = Vector2(-191, -247)
 
-[node name="PineTree" parent="." unique_id=1149868711 instance=ExtResource("2_ony8i")]
+[node name="PineTree" parent="." unique_id=1487322421 instance=ExtResource("2_ony8i")]
 position = Vector2(434, 385)
 
 [node name="PineTree2" parent="." unique_id=622589231 instance=ExtResource("2_ony8i")]
@@ -163,6 +169,33 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ony8i")
 text = "0"
 label_settings = SubResource("LabelSettings_ony8i")
 horizontal_alignment = 2
+
+[node name="PineTree9" parent="." unique_id=290362282 instance=ExtResource("2_ony8i")]
+position = Vector2(278, 188)
+
+[node name="PineTree10" parent="." unique_id=811203726 instance=ExtResource("2_ony8i")]
+position = Vector2(1288, 174)
+
+[node name="PineTree11" parent="." unique_id=640562012 instance=ExtResource("2_ony8i")]
+position = Vector2(1374, 986)
+
+[node name="PineTree12" parent="." unique_id=1811424606 instance=ExtResource("2_ony8i")]
+position = Vector2(1673, 857)
+
+[node name="PineTree13" parent="." unique_id=1706976730 instance=ExtResource("2_ony8i")]
+position = Vector2(1741, 353)
+
+[node name="PineTree14" parent="." unique_id=753738600 instance=ExtResource("2_ony8i")]
+position = Vector2(1734, 680)
+
+[node name="PineTree15" parent="." unique_id=388712025 instance=ExtResource("2_ony8i")]
+position = Vector2(547, 1028)
+
+[node name="PineTree16" parent="." unique_id=1177869098 instance=ExtResource("2_ony8i")]
+position = Vector2(133, 978)
+
+[node name="PineTree17" parent="." unique_id=1241105176 instance=ExtResource("2_ony8i")]
+position = Vector2(637, 154)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
