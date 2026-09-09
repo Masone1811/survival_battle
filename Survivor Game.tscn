@@ -25,14 +25,17 @@ outline_color = Color(1, 0.99215686, 1, 1)
 y_sort_enabled = true
 position = Vector2(38, 21)
 script = ExtResource("1_ony8i")
+metadata/_edit_vertical_guides_ = [-70.0]
+metadata/_edit_horizontal_guides_ = [58.0]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1500965773]
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1514317463]
-offset_top = -2.0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = -10.0
+offset_top = -9.0
+offset_right = 1910.0
+offset_bottom = 1073.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=814097230 instance=ExtResource("1_jkuhc")]
@@ -104,6 +107,31 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 144
 text = "GAME OVER"
 
+[node name="TimeSurvived" type="Label" parent="GameOver/ColorRect" unique_id=348985155]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = 83.0
+offset_right = 129.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="MobsKilled" type="Label" parent="GameOver/ColorRect" unique_id=1671533382]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 835.0
+offset_top = 716.0
+offset_right = 1086.0
+offset_bottom = 771.0
+theme_override_font_sizes/font_size = 40
+
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1043188422]
 layer = 10
 
@@ -112,12 +140,29 @@ unique_name_in_owner = true
 modulate = Color(0.0627451, 0.69803923, 0.9372549, 0.8156863)
 light_mask = 0
 visibility_layer = 512
-offset_right = 134.0
-offset_bottom = 72.0
+offset_left = 81.0
+offset_top = 59.0
+offset_right = 187.0
+offset_bottom = 131.0
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxFlat_ony8i")
-text = "0:00"
+text = "00:00"
 label_settings = SubResource("LabelSettings_ony8i")
+
+[node name="KillCounter" type="Label" parent="UILayer" unique_id=1076641473]
+unique_name_in_owner = true
+modulate = Color(0.0627451, 0.69803923, 0.9372549, 0.8156863)
+light_mask = 0
+visibility_layer = 512
+offset_left = 1722.0
+offset_top = 58.0
+offset_right = 1828.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_ony8i")
+text = "0"
+label_settings = SubResource("LabelSettings_ony8i")
+horizontal_alignment = 2
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
