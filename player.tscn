@@ -24,7 +24,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="Player" type="CharacterBody2D" unique_id=814097230]
+[node name="Player" type="CharacterBody2D" unique_id=814097230 groups=["get_tree().get_first_node_in_group(\"player\")"]]
 script = ExtResource("1_onrkg")
 
 [node name="HappyBoo" parent="." unique_id=847432199 instance=ExtResource("1_4flbx")]
@@ -47,7 +47,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_8ib2y")
 debug_color = Color(0.93407845, 2.1081269e-05, 0.644098, 0.41960785)
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1021529276]
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1021529276]
 unique_name_in_owner = true
 offset_left = -84.0
 offset_top = -136.0

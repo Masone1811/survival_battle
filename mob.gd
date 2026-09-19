@@ -3,6 +3,7 @@ extends CharacterBody2D
 signal killed
 
 var health = 4
+var damage = 5.0
 
 @onready var player = get_node("/root/Game/Player")
 
@@ -14,12 +15,14 @@ func _physics_process(delta):
 	velocity = direction * 300.0
 	move_and_slide()
 
+func get_damage():
+	return damage
 
-func take_damage():
-	health = health - 1
+func take_damage(damage):
+	health -= damage
 	%Slime.play_hurt()
 	
-	if health == 0:
+	if health <= 0:
 		killed.emit()
 		queue_free()
 		
