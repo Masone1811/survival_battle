@@ -21,3 +21,11 @@ I fixed the camera position to the center of the screen by adding a Camera2D nod
 when they reach the border of the screen in any direction. This works by checking the coordinates of the players position and if it becomes less than 0 or greater than the screen size in either
 the x or y direction it sets the positional coordinate to either 0 or the max of the screen. I followed this YouTube tutorial to make this function: https://www.youtube.com/watch?v=acFfNAh0tRg
 These changes took me about 30 minutes as well.
+
+4th Change:
+For the loop implementation assignment.
+I added an experience and level up system. The player receives xp when they kill mobs, this is the "faucet", and when they get enough xp they level up allowing them to select an upgrade, this is the "sink". The upgrades are increased damage, increased fire rate, or increase health with a heal. The amount of xp required to level up increases each time.
+
+5th Change:
+For the loop implementation assignment.
+I added a semi round system where every 30 seconds a new round starts. Each round, the color of the background changes and the enemies are buffed. The mobs receive a faster spawn rate, higher damage, and more health each time a new round starts. This round system is meant to be sort of a subloop inside of main game.
